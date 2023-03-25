@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import Types from 'mongoose'
+
 
 export interface IConversation {
   members: string[];

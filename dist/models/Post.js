@@ -1,18 +1,4 @@
-import Types from "mongoose";
-
 import mongoose from "mongoose";
-
-export interface IPost {
-  username: string;
-  title: string;
-  content: string;
-  image: string;
-  likes: [string];
-  comments: [string];
-}
-
-export interface IPostModel extends IPost, mongoose.Document {}
-
 const PostSchema = new mongoose.Schema(
   {
     user: {
@@ -44,5 +30,4 @@ const PostSchema = new mongoose.Schema(
   },
   { timestamps: true, versionKey: false }
 );
-
 export default mongoose.model("Post", PostSchema);

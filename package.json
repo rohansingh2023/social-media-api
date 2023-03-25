@@ -1,8 +1,9 @@
 {
   "name": "graphql-sm-server",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "tsc --project .",
     "dev": "nodemon src/index.ts",

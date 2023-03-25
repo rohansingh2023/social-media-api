@@ -1,19 +1,4 @@
-import Types from "mongoose";
 import mongoose from "mongoose";
-
-export interface IUser {
-  name: string;
-  email: string;
-  password: string;
-  profilePic: string;
-  dob: string;
-  bio: string;
-  friendRequests: [string];
-  friends: [string];
-}
-
-export interface IUserModel extends IUser, mongoose.Document {}
-
 const UserSchema = new mongoose.Schema(
   {
     name: {
@@ -59,5 +44,4 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true, versionKey: false }
 );
-
 export default mongoose.model("User", UserSchema);
