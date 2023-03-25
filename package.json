@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc --project .",
-    "dev": "nodemon src/index.ts",
-    "start": "node dist/index.js"
+    "dev": "nodemon -x ts-node src/index.ts",
+    "start": "ts-node src/index.ts"
   },
   "dependencies": {
     "@types/node": "^17.0.42",
