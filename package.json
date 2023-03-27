@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "build": "tsc --project .",
-    "dev": "nodemon -x ts-node src/index.ts",
-    "start": "ts-node src/index.ts"
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "nodemon src/index.ts"
   },
   "dependencies": {
     "@types/node": "^17.0.42",
