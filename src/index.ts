@@ -6,10 +6,13 @@ import typeDefs from "./graphql/typeDefs/schema";
 import resolvers from "./graphql/resolvers/index";
 import models from "./models";
 import jwt from "jsonwebtoken";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+
+app.use(cors());
 
 const port = process.env.PORT || 8000;
 
@@ -61,3 +64,5 @@ app.listen(port, function () {
   console.log(`server running on port ${port}`);
   // console.log(`gql path is ${apolloServer.graphqlPath}`);
 });
+
+// https://sm-graphql-api.onrender.com/

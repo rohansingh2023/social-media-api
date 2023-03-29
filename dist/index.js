@@ -11,8 +11,10 @@ const schema_1 = __importDefault(require("./graphql/typeDefs/schema"));
 const index_1 = __importDefault(require("./graphql/resolvers/index"));
 const models_1 = __importDefault(require("./models"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const cors_1 = __importDefault(require("cors"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
+app.use((0, cors_1.default)());
 const port = process.env.PORT || 8000;
 (0, db_1.default)();
 app.use(express_1.default.json({ limit: "50mb" }));
@@ -57,4 +59,5 @@ app.listen(port, function () {
     console.log(`server running on port ${port}`);
     // console.log(`gql path is ${apolloServer.graphqlPath}`);
 });
+// https://sm-graphql-api.onrender.com/
 //# sourceMappingURL=index.js.map
