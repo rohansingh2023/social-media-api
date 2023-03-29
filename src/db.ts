@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const DBM_URL =
-  "mongodb://localhost:27017/graphqlSmDB?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
+  "mongodb+srv://rohan:1kHZzHhbqTdEuCQn@cluster0.sgvxcek.mongodb.net/?retryWrites=true&w=majority";
 
 const dbConnect = async () => {
   try {
