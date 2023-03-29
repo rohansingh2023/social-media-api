@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf build/ && tsc",
-    "start": "node build/index.js",
-    "dev": "npx nodemon src/index.ts"
+    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "build": "yarn && tsc",
+    "start": "node ./dist/index.js"
   },
   "dependencies": {
     "@types/node": "^17.0.42",
