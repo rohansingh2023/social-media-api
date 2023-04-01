@@ -40,6 +40,7 @@ async function startServer() {
   apolloServer = new ApolloServer({
     typeDefs,
     resolvers,
+    plugins: [],
     context: ({ req }) => {
       // get the user token from the headers
       const token = req.headers.authorization;
